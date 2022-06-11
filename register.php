@@ -2,7 +2,7 @@
 
     <head>
         <title>
-            🔥 mySnap - Login 🔥
+            🔥 mySnap - Registrieren 🔥
         </title>
     </head>
 
@@ -28,7 +28,7 @@
         #login_fenster{
             background-color: rgb(50, 50, 50);
             width: 800px;
-            height: 350px;
+            height: 650px;
             margin: auto;
             margin-top: 70px;
             padding: 10px;
@@ -69,11 +69,19 @@
 
         <div id="login_fenster">
         <br>
-            <strong style="font-size:25px;">Anmeldung für mySnap</strong><br><br><br>
+            <strong style="font-size:25px;">Registrierung für mySnap</strong><br><br><br>
+            <input type="text" name="Username / E-Mail" id="input_text" placeholder="Vorname"><br><br>
+            <input type="text" name="Username / E-Mail" id="input_text" placeholder="Nachname"><br><br>
             <input type="text" name="Username / E-Mail" id="input_text" placeholder="E-Mail"><br><br>
-            <input type="password" name="Passwort" id="input_text" placeholder="Passwort"><br><br><br>
-            <input type="submit" id="button" value="Anmelden"><br><br><br>
-            <b>Du hast noch kein Account? <a href="register.php">Klicke hier</a></b>
+            <input type="password" name="Passwort" id="input_text" placeholder="Passwort"><br><br>
+            <input type="password" name="Passwort" id="input_text" placeholder="Passwort erneut eingeben"><br><br>
+            <select id="input_text">
+                <option>Mann</option>
+                <option>Frau</option>
+                <option>Diverses</option>
+            </select><br><br><br><br><br>
+            <input type="submit" id="button" value="Registrieren"><br><br><br>
+            <b>Du hast bereits ein Account? <a href="login.php">Klicke hier</a></b>
         </div>
     </body>
 
