@@ -41,8 +41,6 @@
 
         #pb{
             width: 150px;
-            margin-left: -70%;
-            margin-top: -300px;
             border-radius: 50%;
             background-color: rgb(50, 50, 50);
             border: solid 2px white;
@@ -123,44 +121,13 @@
         </div>
 
         <div id="profile_area">
-            <div style="background-color:rgb(50, 50, 50); text-align:center; color: white;">
-                <img src="img/platzhalter-banner.jpg" style="width:100%;">
-                <img src="img/platzhalter-selfie.jpg" id="pb">
-                <br>
-                <div style="font-size: 25px; margin-left:25%; margin-top:-80px; color: white;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"><p align="left">Izuku Midoriya</p></div>
-                <br>
-                <div id="menu_buttons">Timeline</div>
-                <div id="menu_buttons">Über mich</div>
-                <div id="menu_buttons">Freunde</div>
-                <div id="menu_buttons">Fotos</div>
-                <div id="menu_buttons">Einstellungen</div>
-            </div>
 
             <div style="display:flex;">
                 <!--Freunde-Liste-->
                 <div style="min-height:400px; flex:1;">
                     <div id="freunde_liste">
-                        Freunde<br>
-                        <div id="freunde">
-                            <img id="freunde_img" src="img/platzhalter-user1.jpg">
-                            <br>
-                            Froppy
-                        </div>
-                        <div id="freunde">
-                            <img id="freunde_img" src="img/platzhalter-user2.jpg">
-                            <br>
-                            Katski Bakogu
-                        </div>
-                        <div id="freunde">
-                            <img id="freunde_img" src="img/platzhalter-user3.jpg">
-                            <br>
-                            All Might
-                        </div>
-                        <div id="freunde">
-                            <img id="freunde_img" src="img/platzhalter-user4.jpg">
-                            <br>
-                            Eraserhead
-                        </div>
+                       <img src="img/platzhalter-selfie.jpg" id="pb"><br>
+                       Izuku Midoriya
                     </div>
                 </div>
                 <!--Posting-Liste-->
