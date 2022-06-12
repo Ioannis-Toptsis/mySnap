@@ -1,3 +1,32 @@
+<?php
+    include("classes/connect.php");
+    include("classes/register.php");
+
+    $vorname = "";
+    $nachname = "";
+    $geschlecht = "";
+    $email = "";
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $register = new Register();
+        $result = $register->evaluate($_POST);
+
+        if($result != ""){
+            echo "<div style='text-align:center; font-size:30px; color:white; background-color:rgb(250, 134, 10);'>";
+            echo $result;
+            echo "</div>";
+        }else{
+            header("Location: login.php");
+            die;
+        }
+
+        $vorname = $_POST['vorname'];
+        $nachname = $_POST['nachname'];
+        $geschlecht = $_POST['geschlecht'];
+        $email = $_POST['email'];
+    }
+?>
+
 <html>
 <!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
 
@@ -47,7 +76,7 @@
             font-size: 14px;
         }
 
-        a:link{
+        a{
             color: lightskyblue;
         }
 
@@ -71,17 +100,20 @@
         <div id="login_fenster">
         <br>
             <strong style="font-size:25px;">Registrierung für mySnap</strong><br><br><br>
-            <input type="text" name="Username / E-Mail" id="input_text" placeholder="Vorname"><br><br>
-            <input type="text" name="Username / E-Mail" id="input_text" placeholder="Nachname"><br><br>
-            <input type="text" name="Username / E-Mail" id="input_text" placeholder="E-Mail (z.B Giovanni_Giorgio@lossantos.com)"><br><br>
-            <input type="password" name="Passwort" id="input_text" placeholder="Passwort"><br><br>
-            <input type="password" name="Passwort" id="input_text" placeholder="Passwort erneut eingeben"><br><br>
-            <select id="input_text">
-                <option>Mann</option>
-                <option>Frau</option>
-                <option>Diverses</option>
-            </select><br><br><br><br><br>
-            <input type="submit" id="button" value="Registrieren"><br><br><br>
+            <form method="post" action="">
+                <input value="<?php echo $vorname ?>" name="vorname" type="text" id="input_text" placeholder="Vorname"><br><br>
+                <input value="<?php echo $nachname ?>" name="nachname" type="text" id="input_text" placeholder="Nachname"><br><br>
+                <input value="<?php echo $email ?>" name="email" type="text" id="input_text" placeholder="E-Mail"><br><br>
+                <input name="passwort" type="password" id="input_text" placeholder="Passwort"><br><br>
+                <input name="passwort2" type="password" id="input_text" placeholder="Passwort erneut eingeben"><br><br>
+                <select id="input_text" name="geschlecht">
+                    <option><?php echo $geschlecht ?></option>
+                    <option>Mann</option>
+                    <option>Frau</option>
+                    <option>Diverses</option>
+                </select><br><br><br><br><br>
+                <input type="submit" id="button" value="Registrieren"><br><br><br>
+            </form>
             <b>Du hast bereits ein Account? <a href="login.php">Klicke hier</a></b>
         </div>
     </body>

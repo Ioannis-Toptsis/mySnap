@@ -1,3 +1,35 @@
+<?php
+    session_start();
+
+    include("classes/connect.php");
+    include("classes/login.php");
+    include("classes/user.php");
+
+    if(isset($_SESSION['mysnap_userid']) && is_numeric($_SESSION['mysnap_userid'])){
+        $id = $_SESSION['mysnap_userid'];
+        $login = new Login();
+
+        $result = $login->logincheck($id);
+
+        if($result){
+            $user = new User();
+            $user_data = $user->get_data($id);
+
+            if(!$user_data){
+                header("Location: login.php");
+                die;
+            }
+        }else{
+            header("Location: login.php");
+            die;
+        }
+    }else{
+        header("Location: login.php");
+        die;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 <!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
@@ -92,6 +124,7 @@
             padding: 4px;
             font-size: 17px;
             border-radius: 2px;
+            height: 25px;
             width: 70px;
         }
 

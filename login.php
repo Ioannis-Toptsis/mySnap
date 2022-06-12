@@ -1,3 +1,29 @@
+<?php
+    include("classes/connect.php");
+    include("classes/login.php");
+    session_start();
+
+    $email = "";
+    $passwort = "";
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $login = new Login();
+        $result = $login->execute($_POST);
+
+        if($result != ""){
+            echo "<div style='text-align:center; font-size:30px; color:white; background-color:rgb(250, 134, 10);'>";
+            echo $result;
+            echo "</div>";
+        }else{
+            header("Location: profile.php");
+            die;
+        }
+
+        $email = $_POST['email'];
+        $passwort = $_POST['passwort'];
+    }
+?>
+
 <html>
 <!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
 
@@ -71,9 +97,11 @@
         <div id="login_fenster">
         <br>
             <strong style="font-size:25px;">Anmeldung für mySnap</strong><br><br><br>
-            <input type="text" name="Username / E-Mail" id="input_text" placeholder="E-Mail"><br><br>
-            <input type="password" name="Passwort" id="input_text" placeholder="Passwort"><br><br><br>
+            <form method="post">
+            <input name="email" value="<?php echo $email ?>" type="text" id="input_text" placeholder="E-Mail"><br><br>
+            <input name="passwort" value="<?php echo $passwort ?>" type="password" id="input_text" placeholder="Passwort"><br><br><br>
             <input type="submit" id="button" value="Anmelden"><br><br><br>
+            </form>
             <b>Du hast noch kein Account? <a href="register.php">Klicke hier</a></b>
         </div>
     </body>
