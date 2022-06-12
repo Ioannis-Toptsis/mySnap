@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
 
     <head>
         <title>
@@ -13,7 +14,7 @@
             font-family: Arial;
         }
 
-        #orange_bar{
+        #bar{
             height: 50px;
             background-color: rgb(250, 134, 10);
             color: white;
@@ -32,10 +33,9 @@
             background-size: 20px;
         }
 
-        #profile_area{
+        #timeline_area{
             width: 800px;
             margin: auto;
-            background-color: rgb(50, 50, 50);
             min-height: 400px;
         }
 
@@ -46,30 +46,15 @@
             border: solid 2px white;
         }
 
-        #menu_buttons{
-            width: 100px;
-            display: inline-block;
-            margin: 2px;
-        }
-
-        #freunde_img{
-            width: 50px;
-            float: left;
-            margin: 8px;
-        }
-
-        #freunde_liste{
+        #liste{
             min-height: 500px;
             margin-top: 20px;
             color: white;
             padding: 8px;
-        }
-
-        #freunde{
-            clear: both;
-            font-size: 14px;
-            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
             color: rgb(250, 134, 10);
+            background-color: rgb(36, 36, 36);
         }
 
         textarea{
@@ -113,31 +98,28 @@
     </style>
 
     <body id="body">
-        <div id="orange_bar">
+        <div id="bar">
             <div style="width:1600px; margin:auto; font-size:30px;">
                 mySnap &nbsp &nbsp &nbsp &nbsp<input type="text" id="suchbox" placeholder="Suche nach Personen oder Gewerbe">
                 <img src="img/platzhalter-selfie.jpg" style="width:50px; float:right;">
             </div>
         </div>
 
-        <div id="profile_area">
+        <div id="timeline_area">
 
             <div style="display:flex;">
-                <!--Freunde-Liste-->
                 <div style="min-height:400px; flex:1;">
-                    <div id="freunde_liste">
+                    <div id="liste">
                        <img src="img/platzhalter-selfie.jpg" id="pb"><br>
                        Izuku Midoriya
                     </div>
                 </div>
-                <!--Posting-Liste-->
                     <div style="min-height:400px; flex:2.5; padding:20px; padding-right: 0px;">
                         <div style="border:solid thin #aaa; padding:10px; background-color:rgb(60, 60, 60);">
-                        <textarea placeholder="Kommentar"></textarea>
+                        <textarea placeholder="Was geht ab?"></textarea>
                         <input id="post_button" type="submit" value="Posten">
                         <br>
                     </div>
-                    <!--Posting-Bereich-->
                     <div id="post_bar">
                         <div id="post">
                             <div>
@@ -171,4 +153,5 @@
         </div>
     </body>
 
+<!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
 </html>

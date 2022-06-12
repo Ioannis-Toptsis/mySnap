@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
 
     <head>
         <title>
@@ -13,7 +14,7 @@
             font-family: Arial;
         }
 
-        #orange_bar{
+        #bar{
             height: 50px;
             background-color: rgb(250, 134, 10);
             color: white;
@@ -35,7 +36,6 @@
         #profile_area{
             width: 800px;
             margin: auto;
-            background-color: rgb(50, 50, 50);
             min-height: 400px;
         }
 
@@ -115,7 +115,7 @@
     </style>
 
     <body id="body">
-        <div id="orange_bar">
+        <div id="bar">
             <div style="width:1600px; margin:auto; font-size:30px;">
                 mySnap &nbsp &nbsp &nbsp &nbsp<input type="text" id="suchbox" placeholder="Suche nach Personen oder Gewerbe">
                 <img src="img/platzhalter-selfie.jpg" style="width:50px; float:right;">
@@ -204,4 +204,5 @@
         </div>
     </body>
 
+<!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
 </html>

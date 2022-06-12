@@ -1,4 +1,5 @@
 <html>
+<!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
 
     <head>
         <title>
@@ -46,7 +47,7 @@
             font-size: 14px;
         }
 
-        a:link{
+        a{
             color: lightskyblue;
         }
 
@@ -77,4 +78,5 @@
         </div>
     </body>
 
+<!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
 </html>

@@ -1,4 +1,5 @@
 <html>
+<!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
 
     <head>
         <title>
@@ -28,7 +29,7 @@
         #login_fenster{
             background-color: rgb(50, 50, 50);
             width: 800px;
-            height: 650px;
+            height: 625px;
             margin: auto;
             margin-top: 70px;
             padding: 10px;
@@ -72,7 +73,7 @@
             <strong style="font-size:25px;">Registrierung für mySnap</strong><br><br><br>
             <input type="text" name="Username / E-Mail" id="input_text" placeholder="Vorname"><br><br>
             <input type="text" name="Username / E-Mail" id="input_text" placeholder="Nachname"><br><br>
-            <input type="text" name="Username / E-Mail" id="input_text" placeholder="E-Mail"><br><br>
+            <input type="text" name="Username / E-Mail" id="input_text" placeholder="E-Mail (z.B Giovanni_Giorgio@lossantos.com)"><br><br>
             <input type="password" name="Passwort" id="input_text" placeholder="Passwort"><br><br>
             <input type="password" name="Passwort" id="input_text" placeholder="Passwort erneut eingeben"><br><br>
             <select id="input_text">
@@ -85,4 +86,5 @@
         </div>
     </body>
 
+<!-- Code by Ioannis Toptsis | https://github.com/Ioannis-Toptsis -->
 </html>
