@@ -28,6 +28,10 @@
         die;
     }
 
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        print_r($_POST);
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -152,6 +156,9 @@
             <div style="width:1600px; margin:auto; font-size:30px;">
                 mySnap &nbsp &nbsp &nbsp &nbsp<input type="text" id="suchbox" placeholder="Suche nach Personen oder Gewerbe">
                 <img src="img/platzhalter-selfie.jpg" style="width:50px; float:right;">
+                <a href="logout.php">
+                <span style="font-size:13px; float:right; margin:10px;">Ausloggen</span>
+                </a>
             </div>
         </div>
 
@@ -160,7 +167,7 @@
                 <img src="img/platzhalter-banner.jpg" style="width:100%;">
                 <img src="img/platzhalter-selfie.jpg" id="pb">
                 <br>
-                <div style="font-size: 25px; margin-left:25%; margin-top:-80px; color: white;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"><p align="left">Izuku Midoriya</p></div>
+                <div style="font-size: 25px; margin-left:25%; margin-top:-80px; color: white;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"><p align="left"><?php echo $user_data['vorname'] . " " . $user_data['nachname'] ?></p></div>
                 <br>
                 <div id="menu_buttons">Timeline</div>
                 <div id="menu_buttons">Über mich</div>
@@ -199,9 +206,11 @@
                 <!--Posting-Liste-->
                     <div style="min-height:400px; flex:2.5; padding:20px; padding-right: 0px;">
                         <div style="border:solid thin #aaa; padding:10px; background-color:rgb(60, 60, 60);">
-                        <textarea placeholder="Kommentar"></textarea>
+                        <form method="post">
+                        <textarea name="post" placeholder="Kommentar"></textarea>
                         <input id="post_button" type="submit" value="Posten">
                         <br>
+                        </form>
                     </div>
                     <!--Posting-Bereich-->
                     <div id="post_bar">
